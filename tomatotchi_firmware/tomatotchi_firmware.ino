@@ -1,4 +1,5 @@
 #include "music.h"
+#include "temp.h"
 #include <Wire.h>
 
 
@@ -12,8 +13,10 @@ void setup(void)
 }
 void loop()
 {
-  //sing the tunes
-  sing(1);
-  sing(1);
-  sing(2);
+  float temp = gettemp();
+  
+  Serial.print(String(temp));
+  
+  
+  delay(1000);
 }
